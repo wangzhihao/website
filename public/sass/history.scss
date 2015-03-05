@@ -1,0 +1,70 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+html, body{
+    height: 100%;
+}
+
+html {
+  /*  https://css-tricks.com/perfect-full-page-background-image/  */
+  background: url(/images/nightBackground.jpg) no-repeat center center;
+  @include background-size(cover);
+  min-height: 600px;
+  min-width: 1024px;
+}
+
+.container{
+  position: relative;
+  height: 100%;
+}
+
+.star{
+  background: url(/images/star.png) no-repeat;
+  height: 37px;
+  width: 27px;
+  position: absolute;
+}
+
+.blink {
+   @include animation(blink_animation 1s steps(5, start) infinite);
+}
+
+@include keyframes(blink_animation) {
+  to {
+    visibility: hidden;
+  }
+}
+
+.thinker {
+  background: url(/images/litterThinker.png) no-repeat;
+  @include background-size(contain);
+  height: 166px;
+  width: 207px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.cloud{
+  background: url(/images/cloud.png) no-repeat;
+  @include background-size(contain);
+  height: 390px;
+  width: 327px;
+  position: absolute;
+  left: 100px;
+  opacity: 0.5;
+}
+
+.moon{
+  background: url(/images/moon.png) no-repeat;
+  @include background-size(contain);
+  height: 133px;
+  width: 150px;
+  position: absolute;
+  right: 100px;
+}
