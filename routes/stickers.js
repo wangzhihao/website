@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET achievements page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'My Personal Site' });
+  res.render('stickers', { title: 'Stickers' });
 });
 
 module.exports = router;

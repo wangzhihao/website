@@ -1,0 +1,60 @@
+/* line 1, ../sass/achievements.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 5, ../sass/achievements.scss */
+.subject_name {
+  border-bottom: 2px solid;
+  width: 80%;
+  padding-bottom: 20px;
+}
+
+/* line 11, ../sass/achievements.scss */
+.item * {
+  display: inline-table;
+}
+
+/* line 15, ../sass/achievements.scss */
+.item:hover {
+  background: #e5e4e3;
+  transition: background-color 0.5s ease;
+}
+/* line 18, ../sass/achievements.scss */
+.item:hover .more {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* line 25, ../sass/achievements.scss */
+.item .icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  font-size: 20px;
+}
+/* line 31, ../sass/achievements.scss */
+.item .course {
+  background: url(/images/board.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* line 36, ../sass/achievements.scss */
+.item .name {
+  width: 50%;
+}
+/* line 39, ../sass/achievements.scss */
+.item .more {
+  opacity: 0;
+}
+/* line 41, ../sass/achievements.scss */
+.item .more .text {
+  margin-left: 5px;
+}
+
+/* line 47, ../sass/achievements.scss */
+.in_progress {
+  color: #FFA806;
+  width: 200px;
+  margin-left: 40px;
+}

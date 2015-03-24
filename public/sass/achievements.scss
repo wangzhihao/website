@@ -1,0 +1,51 @@
+ul {
+    list-style-type: none;
+}
+
+.subject_name {
+    border-bottom: 2px solid;
+    width: 80%;
+    padding-bottom: 20px;
+}
+
+.item * {
+    display: inline-table;
+}
+
+.item:hover{
+    background: #e5e4e3;
+    transition: background-color 0.5s ease;
+    .more {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+}
+
+.item {
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        font-size: 20px;
+    }
+    .course {
+        background: url(/images/board.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .name {
+        width: 50%;
+    }
+    .more {
+        opacity: 0;
+        .text{
+            margin-left: 5px;
+        }
+    }
+}
+
+.in_progress {
+    color: #FFA806;
+    width: 200px;
+    margin-left: 40px;
+}

@@ -2,8 +2,54 @@ doctype html
 html
   head
     title= title
-  body
-    div --------- March -----------
-    ul
-      li  try ruby  [http://tryruby.org/]
-      li  lessons: Learning webGL (In progress) [http://learningwebgl.com/blog/?page_id=1217]
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    link(rel='stylesheet', href='/stylesheets/achievements.css')
+  body(ng-app='achieveApp', ng-controller='achieveCtrl as achieveCtrl')
+
+    // button.btn.btn-primary(data-toggle="modal", data-target="#editModal") I got skills!
+    .container
+      ul.subject(ng-repeat='(subject, achieves) in achieveCtrl.achievements')
+        h3.subject_name(ng-bind='subject')
+        li.category(ng-repeat='(category, achieves) in achieves')
+          h4.category_name(ng-bind='category')
+          ul
+            li.item(ng-repeat='achievement in achieves')
+
+              // the icon indicates the type.
+              .icon.course(ng-if='achievement.type == "course" ')
+              .icon.ionicons.ion-ios-paper-outline(ng-if='achievement.type == "paper" ')
+              .icon.fa.fa-lightbulb-o(ng-if='achievement.type == "knowledge" ')
+              .icon.fa.fa-book(ng-if='achievement.type == "book" ')
+
+              // the name.
+              .name(ng-bind='achievement.name')
+
+              .in_progress(ng-if='achievement.inProgress')
+                <i class="fa fa-spinner fa-pulse"></i> in progress
+
+
+    include ./achievements/modals.html
+
+    // third party scripts
+    script( src="javascripts/third-parties/jquery.min.js")
+    script( src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+    script( src="javascripts/third-parties/angular.js")
+    script( src="javascripts/third-parties/angular-animate.min.js")
+    script( src="javascripts/third-parties/underscore.js")
+    script( src="javascripts/third-parties/restangular.min.js")
+
+    // AngularJs scripts
+    script( src="javascripts/achievements/app.js")
+    script( src="javascripts/achievements/controllers/achievementsCtrl.js")
+    script( src="javascripts/achievements/services/achievementsService.js")
+    
+    //
+      script( src="javascripts/achievements/directives/addTooltipDirective.js")
+      script( src="javascripts/achievements/directives/achievementsDialogLocalizationDirective.js")
+      script( src="javascripts/achievements/directives/wordTagDirective.js")
+      script( src="javascripts/achievements/services/achievementselectionService.js")
+      script( src="javascripts/achievements/services/achievementsLocalService.js")
+    
