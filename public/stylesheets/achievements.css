@@ -1,58 +1,278 @@
-/* line 1, ../sass/achievements.scss */
+/* line 2, ../sass/achievements.scss */
 ul {
   list-style-type: none;
 }
 
-/* line 5, ../sass/achievements.scss */
-.subject_name {
-  border-bottom: 2px solid;
-  width: 80%;
-  padding-bottom: 20px;
+@-moz-keyframes rotating {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
-
-/* line 11, ../sass/achievements.scss */
-.item * {
-  display: inline-table;
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
-
+@keyframes rotating {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 /* line 15, ../sass/achievements.scss */
-.item:hover {
-  background: #e5e4e3;
-  transition: background-color 0.5s ease;
-}
-/* line 18, ../sass/achievements.scss */
-.item:hover .more {
-  opacity: 1;
-  transition: opacity 0.5s ease;
+.rotating {
+  -moz-animation: rotating 60s linear infinite;
+  -webkit-animation: rotating 60s linear infinite;
+  animation: rotating 60s linear infinite;
 }
 
-/* line 25, ../sass/achievements.scss */
-.item .icon {
-  width: 20px;
+/* line 26, ../sass/achievements.scss */
+.knowledge_level {
+  color: rgba(203, 190, 181, 0.8);
+}
+
+/* line 30, ../sass/achievements.scss */
+.comprehension_level {
+  color: rgba(255, 229, 169, 0.8);
+}
+
+/* line 34, ../sass/achievements.scss */
+.application_level {
+  color: rgba(141, 210, 215, 0.8);
+}
+
+/* line 38, ../sass/achievements.scss */
+.analysis_level {
+  color: rgba(92, 88, 88, 0.8);
+}
+
+/* line 42, ../sass/achievements.scss */
+.synthesis_level {
+  color: rgba(223, 240, 216, 0.8);
+}
+
+/* line 46, ../sass/achievements.scss */
+.evaluation_level {
+  color: rgba(255, 0, 0, 0.8);
+}
+
+/* line 50, ../sass/achievements.scss */
+.container {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* line 53, ../sass/achievements.scss */
+.hyperpeace {
+  position: absolute;
+  top: 300px;
+  right: 450px;
+  z-index: -2;
+}
+/* line 59, ../sass/achievements.scss */
+.hyperpeace .sexagram {
+  position: absolute;
+  width: 150px;
+  height: 129.90381px;
+  /*
+  &:before{
+      content: '';
+      width: 4px;
+      height: 4px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background-color: blue;
+  }*/
+}
+/* line 73, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle {
+  position: absolute;
+  width: 150px;
+  height: 129.90381px;
+}
+/* line 79, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle:nth-child(1) {
+  transform: rotate(0deg) translateY(-150%);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5MTUwNiIgeTE9IjAuMTU4NDk0IiB4Mj0iMS4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NiYmViNSIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMDkxNTA2IiB5MT0iMC4xNTg0OTQiIHgyPSItMC4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NiYmViNSIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(203, 190, 181, 0.8) 64.95191px), -moz-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(203, 190, 181, 0.8) 64.95191px);
+  background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(203, 190, 181, 0.8) 64.95191px), -webkit-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(203, 190, 181, 0.8) 64.95191px);
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0) 64.95191px, rgba(203, 190, 181, 0.8) 64.95191px), linear-gradient(240deg, rgba(0, 0, 0, 0) 64.95191px, rgba(203, 190, 181, 0.8) 64.95191px);
+  background-repeat: no-repeat;
+  background-size: 50% 100%, 50% 100%;
+  background-position: top left, top right;
+}
+/* line 79, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle:nth-child(2) {
+  transform: rotate(60deg) translateY(-150%);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5MTUwNiIgeTE9IjAuMTU4NDk0IiB4Mj0iMS4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZTVhOSIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMDkxNTA2IiB5MT0iMC4xNTg0OTQiIHgyPSItMC4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZTVhOSIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 229, 169, 0.8) 64.95191px), -moz-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 229, 169, 0.8) 64.95191px);
+  background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 229, 169, 0.8) 64.95191px), -webkit-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 229, 169, 0.8) 64.95191px);
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 229, 169, 0.8) 64.95191px), linear-gradient(240deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 229, 169, 0.8) 64.95191px);
+  background-repeat: no-repeat;
+  background-size: 50% 100%, 50% 100%;
+  background-position: top left, top right;
+}
+/* line 79, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle:nth-child(3) {
+  transform: rotate(120deg) translateY(-150%);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5MTUwNiIgeTE9IjAuMTU4NDk0IiB4Mj0iMS4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzhkZDJkNyIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMDkxNTA2IiB5MT0iMC4xNTg0OTQiIHgyPSItMC4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzhkZDJkNyIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(141, 210, 215, 0.8) 64.95191px), -moz-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(141, 210, 215, 0.8) 64.95191px);
+  background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(141, 210, 215, 0.8) 64.95191px), -webkit-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(141, 210, 215, 0.8) 64.95191px);
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0) 64.95191px, rgba(141, 210, 215, 0.8) 64.95191px), linear-gradient(240deg, rgba(0, 0, 0, 0) 64.95191px, rgba(141, 210, 215, 0.8) 64.95191px);
+  background-repeat: no-repeat;
+  background-size: 50% 100%, 50% 100%;
+  background-position: top left, top right;
+}
+/* line 79, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle:nth-child(4) {
+  transform: rotate(180deg) translateY(-150%);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5MTUwNiIgeTE9IjAuMTU4NDk0IiB4Mj0iMS4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVjNTg1OCIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMDkxNTA2IiB5MT0iMC4xNTg0OTQiIHgyPSItMC4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVjNTg1OCIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(92, 88, 88, 0.8) 64.95191px), -moz-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(92, 88, 88, 0.8) 64.95191px);
+  background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(92, 88, 88, 0.8) 64.95191px), -webkit-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(92, 88, 88, 0.8) 64.95191px);
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0) 64.95191px, rgba(92, 88, 88, 0.8) 64.95191px), linear-gradient(240deg, rgba(0, 0, 0, 0) 64.95191px, rgba(92, 88, 88, 0.8) 64.95191px);
+  background-repeat: no-repeat;
+  background-size: 50% 100%, 50% 100%;
+  background-position: top left, top right;
+}
+/* line 79, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle:nth-child(5) {
+  transform: rotate(240deg) translateY(-150%);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5MTUwNiIgeTE9IjAuMTU4NDk0IiB4Mj0iMS4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RmZjBkOCIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMDkxNTA2IiB5MT0iMC4xNTg0OTQiIHgyPSItMC4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RmZjBkOCIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(223, 240, 216, 0.8) 64.95191px), -moz-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(223, 240, 216, 0.8) 64.95191px);
+  background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(223, 240, 216, 0.8) 64.95191px), -webkit-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(223, 240, 216, 0.8) 64.95191px);
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0) 64.95191px, rgba(223, 240, 216, 0.8) 64.95191px), linear-gradient(240deg, rgba(0, 0, 0, 0) 64.95191px, rgba(223, 240, 216, 0.8) 64.95191px);
+  background-repeat: no-repeat;
+  background-size: 50% 100%, 50% 100%;
+  background-position: top left, top right;
+}
+/* line 79, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle:nth-child(6) {
+  transform: rotate(300deg) translateY(-150%);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5MTUwNiIgeTE9IjAuMTU4NDk0IiB4Mj0iMS4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMDkxNTA2IiB5MT0iMC4xNTg0OTQiIHgyPSItMC4wOTE1MDYiIHkyPSIwLjg0MTUwNiI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 0, 0, 0.8) 64.95191px), -moz-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 0, 0, 0.8) 64.95191px);
+  background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 0, 0, 0.8) 64.95191px), -webkit-linear-gradient(210deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 0, 0, 0.8) 64.95191px);
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 0, 0, 0.8) 64.95191px), linear-gradient(240deg, rgba(0, 0, 0, 0) 64.95191px, rgba(255, 0, 0, 0.8) 64.95191px);
+  background-repeat: no-repeat;
+  background-size: 50% 100%, 50% 100%;
+  background-position: top left, top right;
+}
+/* line 88, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle .text {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+/* line 94, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle .text .rank {
+  font-size: 30px;
+}
+/* line 97, ../sass/achievements.scss */
+.hyperpeace .sexagram .equilateral_triangle .text .name {
+  font-size: 15px;
+}
+
+/* line 105, ../sass/achievements.scss */
+.info {
+  float: right;
+}
+
+/* line 109, ../sass/achievements.scss */
+.bloom_taxonomy {
+  width: 100%;
+  position: fixed;
+}
+/* line 112, ../sass/achievements.scss */
+.bloom_taxonomy * {
+  margin: 20px;
+  float: right;
+}
+
+/* line 118, ../sass/achievements.scss */
+.icon {
+  width: 24px;
   height: 20px;
   margin: 0 5px;
   font-size: 20px;
 }
-/* line 31, ../sass/achievements.scss */
-.item .course {
+
+/* line 125, ../sass/achievements.scss */
+.subject {
+  width: 80%;
+}
+/* line 127, ../sass/achievements.scss */
+.subject .subject_name {
+  border-bottom: 2px solid;
+  padding-bottom: 20px;
+}
+/* line 132, ../sass/achievements.scss */
+.subject .item .brief {
+  cursor: pointer;
+}
+/* line 133, ../sass/achievements.scss */
+.subject .item .brief:hover {
+  background: #e5e4e3;
+  transition: background-color 0.5s ease;
+}
+/* line 136, ../sass/achievements.scss */
+.subject .item .brief:hover .more {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+/* line 142, ../sass/achievements.scss */
+.subject .item .brief * {
+  display: inline-table;
+}
+/* line 145, ../sass/achievements.scss */
+.subject .item .brief .course {
   background: url(/images/board.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 36, ../sass/achievements.scss */
-.item .name {
+/* line 150, ../sass/achievements.scss */
+.subject .item .brief .name {
   width: 50%;
 }
-/* line 39, ../sass/achievements.scss */
-.item .more {
+/* line 153, ../sass/achievements.scss */
+.subject .item .brief .more {
   opacity: 0;
 }
-/* line 41, ../sass/achievements.scss */
-.item .more .text {
+/* line 155, ../sass/achievements.scss */
+.subject .item .brief .more .text {
   margin-left: 5px;
 }
+/* line 160, ../sass/achievements.scss */
+.subject .item .details {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  border-left: 4px solid #EDEAE6;
+}
+/* line 166, ../sass/achievements.scss */
+.subject .item .details .resources a {
+  margin: 0 10px;
+}
 
-/* line 47, ../sass/achievements.scss */
+/* line 174, ../sass/achievements.scss */
 .in_progress {
   color: #FFA806;
   width: 200px;

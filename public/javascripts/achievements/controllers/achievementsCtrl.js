@@ -6,6 +6,7 @@
 
   function achieveCtrl(achieveService) {
     var ctrl = this;
+
     achieveService.getAchievements().then(function(results) {
       //group by subject firstly.
       results = _.groupBy(results, function(item) {

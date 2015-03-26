@@ -11,27 +11,58 @@ html
 
     // button.btn.btn-primary(data-toggle="modal", data-target="#editModal") I got skills!
     .container
+      .hyperpeace
+        .sexagram.rotating
+          .equilateral_triangle
+            .text
+              .rank 1
+              .name knowledge
+          .equilateral_triangle
+            .text
+              .rank 2
+              .name comprehension
+          .equilateral_triangle
+            .text
+              .rank 3
+              .name application
+          .equilateral_triangle
+            .text
+              .rank 4
+              .name analysis
+          .equilateral_triangle
+            .text
+              .rank 5
+              .name synthesis
+          .equilateral_triangle
+            .text
+              .rank 6
+              .name evaluation
+
       ul.subject(ng-repeat='(subject, achieves) in achieveCtrl.achievements')
         h3.subject_name(ng-bind='subject')
         li.category(ng-repeat='(category, achieves) in achieves')
           h4.category_name(ng-bind='category')
           ul
             li.item(ng-repeat='achievement in achieves')
+              .brief(my-collapse)
+                // the icon indicates the type.
+                .icon.course(ng-if='achievement.type == "course" ')
+                .icon.ionicons.ion-ios-paper-outline(ng-if='achievement.type == "paper" ')
+                .icon.fa.fa-puzzle-piece(ng-if='achievement.type == "knowledge" ')
+                .icon.fa.fa-lightbulb-o(ng-if='achievement.type == "skill" ')
+                .icon.fa.fa-book(ng-if='achievement.type == "book" ')
 
-              // the icon indicates the type.
-              .icon.course(ng-if='achievement.type == "course" ')
-              .icon.ionicons.ion-ios-paper-outline(ng-if='achievement.type == "paper" ')
-              .icon.fa.fa-lightbulb-o(ng-if='achievement.type == "knowledge" ')
-              .icon.fa.fa-book(ng-if='achievement.type == "book" ')
+                // the name.
+                .name(ng-bind='achievement.name')
 
-              // the name.
-              .name(ng-bind='achievement.name')
-
-              .in_progress(ng-if='achievement.inProgress')
-                <i class="fa fa-spinner fa-pulse"></i> in progress
+                .in_progress(ng-if='achievement.inProgress')
+                  <i class="fa fa-spinner fa-pulse"></i> in progress
+              .details.collapse
+                .resources
+                    a(ng-repeat='address in achievement.resources', ng-href='{{address}}') link{{$index}}
 
 
-    include ./achievements/modals.html
+    // include ./achievements/modals.html
 
     // third party scripts
     script( src="javascripts/third-parties/jquery.min.js")
@@ -45,9 +76,9 @@ html
     script( src="javascripts/achievements/app.js")
     script( src="javascripts/achievements/controllers/achievementsCtrl.js")
     script( src="javascripts/achievements/services/achievementsService.js")
-    
+    script( src="javascripts/achievements/directives/myCollapse.js")
+
     //
-      script( src="javascripts/achievements/directives/addTooltipDirective.js")
       script( src="javascripts/achievements/directives/achievementsDialogLocalizationDirective.js")
       script( src="javascripts/achievements/directives/wordTagDirective.js")
       script( src="javascripts/achievements/services/achievementselectionService.js")

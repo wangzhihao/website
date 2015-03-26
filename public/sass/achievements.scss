@@ -1,45 +1,172 @@
+@import "compass/css3";
 ul {
     list-style-type: none;
 }
 
-.subject_name {
-    border-bottom: 2px solid;
+@include keyframes(rotating){
+    0%{
+        @include transform(rotate(0deg));
+    }
+    100%{
+         @include transform(rotate(360deg));
+    }
+}
+
+.rotating {
+    @include animation(rotating 60s linear infinite);
+}
+
+$colors: rgba(203,190,181, 0.8),
+ rgba(255,229,169, 0.8),
+ rgba(141,210,215, 0.8),
+ rgba(92,88,88,0.8),
+ rgba(223, 240, 216, 0.8), 
+ rgba(255,0,0, 0.8);
+
+.knowledge_level {
+    color: nth($colors, 1);
+}
+
+.comprehension_level {
+    color: nth($colors, 2);
+}
+
+.application_level {
+    color: nth($colors, 3);
+}
+
+.analysis_level {
+    color: nth($colors, 4);
+}
+
+.synthesis_level {
+    color: nth($colors, 5);
+}
+
+.evaluation_level {
+    color: nth($colors, 6);
+}
+
+.container{
+    background-color: rgba(255,255,255,0.3);
+}
+.hyperpeace {
+    $size: 150px;
+    position: absolute;
+    top: 300px;
+    right: 450px;
+    z-index: -2;
+    .sexagram {
+        position: absolute;
+        width: $size;
+        height: sqrt(3)/2*$size;
+        /*
+        &:before{
+            content: '';
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: blue;
+        }*/
+        .equilateral_triangle {
+            position: absolute; //why need this?
+            width: $size;
+            height: sqrt(3)/2*$size;
+
+            @for $i from 0 to 6 {
+                &:nth-child(#{$i + 1}) {
+                    transform: rotate(360deg/6*$i) translateY(-150%);
+                    $color: nth($colors, $i + 1);
+                    @include background( linear-gradient(120deg, transparent sqrt(3)/4 * $size, $color sqrt(3)/4 * $size), linear-gradient(240deg, transparent sqrt(3)/4 * $size, $color sqrt(3)/4 * $size));
+                    background-repeat: no-repeat;
+                    background-size: 50% 100%, 50% 100%;
+                    background-position: top left, top right;
+                }
+            }
+            .text{
+                position: absolute;
+                bottom: 5%;
+                left: 0;
+                right :0;
+                text-align: center;
+                .rank{
+                    font-size: $size / 5;
+                }
+                .name{
+                    font-size: $size / 10;
+                }
+            }
+        }
+    }
+}
+
+.info {
+    float: right;
+}
+
+.bloom_taxonomy {
+    width: 100%;
+    position: fixed;
+    * {
+        margin: 20px;
+        float: right;
+    }
+}
+
+.icon {
+    width: 24px;
+    height: 20px;
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+.subject {
     width: 80%;
-    padding-bottom: 20px;
-}
-
-.item * {
-    display: inline-table;
-}
-
-.item:hover{
-    background: #e5e4e3;
-    transition: background-color 0.5s ease;
-    .more {
-        opacity: 1;
-        transition: opacity 0.5s ease;
+    .subject_name {
+        border-bottom: 2px solid;
+        padding-bottom: 20px;
     }
-}
-
-.item {
-    .icon {
-        width: 20px;
-        height: 20px;
-        margin: 0 5px;
-        font-size: 20px;
-    }
-    .course {
-        background: url(/images/board.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    .name {
-        width: 50%;
-    }
-    .more {
-        opacity: 0;
-        .text{
-            margin-left: 5px;
+    .item {
+        .brief {
+            &:hover {
+                background: #e5e4e3;
+                transition: background-color 0.5s ease;
+                .more {
+                    opacity: 1;
+                    transition: opacity 0.5s ease;
+                }
+            }
+            cursor: pointer;
+            * {
+                display: inline-table;
+            }
+            .course {
+                background: url(/images/board.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .name {
+                width: 50%;
+            }
+            .more {
+                opacity: 0;
+                .text {
+                    margin-left: 5px;
+                }
+            }
+        }
+        .details {
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+            border-left: 4px solid #EDEAE6;
+            .resources {
+                a {
+                    margin: 0 10px;
+                }
+            }
         }
     }
 }
