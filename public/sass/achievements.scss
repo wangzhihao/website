@@ -102,19 +102,10 @@ $colors: rgba(203,190,181, 0.8),
     }
 }
 
-.info {
-    float: right;
+.acknowledge{
+    text-align: center;
+    font-size: 10px;
 }
-
-.bloom_taxonomy {
-    width: 100%;
-    position: fixed;
-    * {
-        margin: 20px;
-        float: right;
-    }
-}
-
 .icon {
     width: 24px;
     height: 20px;

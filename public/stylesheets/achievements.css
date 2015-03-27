@@ -192,22 +192,12 @@ ul {
 }
 
 /* line 105, ../sass/achievements.scss */
-.info {
-  float: right;
+.acknowledge {
+  text-align: center;
+  font-size: 10px;
 }
 
 /* line 109, ../sass/achievements.scss */
-.bloom_taxonomy {
-  width: 100%;
-  position: fixed;
-}
-/* line 112, ../sass/achievements.scss */
-.bloom_taxonomy * {
-  margin: 20px;
-  float: right;
-}
-
-/* line 118, ../sass/achievements.scss */
 .icon {
   width: 24px;
   height: 20px;
@@ -215,64 +205,64 @@ ul {
   font-size: 20px;
 }
 
-/* line 125, ../sass/achievements.scss */
+/* line 116, ../sass/achievements.scss */
 .subject {
   width: 80%;
 }
-/* line 127, ../sass/achievements.scss */
+/* line 118, ../sass/achievements.scss */
 .subject .subject_name {
   border-bottom: 2px solid;
   padding-bottom: 20px;
 }
-/* line 132, ../sass/achievements.scss */
+/* line 123, ../sass/achievements.scss */
 .subject .item .brief {
   cursor: pointer;
 }
-/* line 133, ../sass/achievements.scss */
+/* line 124, ../sass/achievements.scss */
 .subject .item .brief:hover {
   background: #e5e4e3;
   transition: background-color 0.5s ease;
 }
-/* line 136, ../sass/achievements.scss */
+/* line 127, ../sass/achievements.scss */
 .subject .item .brief:hover .more {
   opacity: 1;
   transition: opacity 0.5s ease;
 }
-/* line 142, ../sass/achievements.scss */
+/* line 133, ../sass/achievements.scss */
 .subject .item .brief * {
   display: inline-table;
 }
-/* line 145, ../sass/achievements.scss */
+/* line 136, ../sass/achievements.scss */
 .subject .item .brief .course {
   background: url(/images/board.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 150, ../sass/achievements.scss */
+/* line 141, ../sass/achievements.scss */
 .subject .item .brief .name {
   width: 50%;
 }
-/* line 153, ../sass/achievements.scss */
+/* line 144, ../sass/achievements.scss */
 .subject .item .brief .more {
   opacity: 0;
 }
-/* line 155, ../sass/achievements.scss */
+/* line 146, ../sass/achievements.scss */
 .subject .item .brief .more .text {
   margin-left: 5px;
 }
-/* line 160, ../sass/achievements.scss */
+/* line 151, ../sass/achievements.scss */
 .subject .item .details {
   position: relative;
   width: 90%;
   margin: 0 auto;
   border-left: 4px solid #EDEAE6;
 }
-/* line 166, ../sass/achievements.scss */
+/* line 157, ../sass/achievements.scss */
 .subject .item .details .resources a {
   margin: 0 10px;
 }
 
-/* line 174, ../sass/achievements.scss */
+/* line 165, ../sass/achievements.scss */
 .in_progress {
   color: #FFA806;
   width: 200px;
