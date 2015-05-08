@@ -13,7 +13,7 @@
     };
 
     var httpService = Restangular.withConfig(function(RestangularConfigurer) {
-      RestangularConfigurer.setBaseUrl('http://localhost:3001/');
+      RestangularConfigurer.setBaseUrl('http://meetyourwords.com:3001/');
     });
 
     return service;
