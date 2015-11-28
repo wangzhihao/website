@@ -1,0 +1,51 @@
+@import 'compass';
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    padding: 20px;
+    background: #ABDEF2;
+    background: linear-gradient(to bottom, #abdef2, #abdef2 60%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+.text {
+    height: 80%;
+    overflow: auto;
+    width: 55%;
+    color: rgb(79, 157, 198);
+    font-family: 'NotoSansHans-Thin', 'Heiti SC', 'Microsoft Yahei', simsun, sans-serif;
+    p {
+        //width: 80%;
+        line-height: 150%;
+        margin: 15px 0;
+    }
+    p.her {
+        content: '';
+        &:before {
+            content: "她：“";
+        }
+        &:after {
+            content: "”";
+        }
+    }
+    p.me {
+        content: '';
+        &:before {
+            content: "我：“";
+        }
+        &:after {
+            content: "”";
+        }
+        //text-align: right;
+    }
+}
+
+.together {
+    position: fixed;
+    width: 40%;
+    right: 20px;
+    top: 20px;
+}

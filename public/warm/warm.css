@@ -1,0 +1,59 @@
+/* line 2, style.scss */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 7, style.scss */
+body {
+  height: 100%;
+  padding: 20px;
+  background: #ABDEF2;
+  background: linear-gradient(to bottom, #abdef2, #abdef2 60%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+/* line 14, style.scss */
+.text {
+  height: 80%;
+  overflow: auto;
+  width: 55%;
+  color: #4f9dc6;
+  font-family: 'NotoSansHans-Thin', 'Heiti SC', 'Microsoft Yahei', simsun, sans-serif;
+}
+/* line 20, style.scss */
+.text p {
+  line-height: 150%;
+  margin: 15px 0;
+}
+/* line 25, style.scss */
+.text p.her {
+  content: '';
+}
+/* line 27, style.scss */
+.text p.her:before {
+  content: "她：“";
+}
+/* line 30, style.scss */
+.text p.her:after {
+  content: "”";
+}
+/* line 34, style.scss */
+.text p.me {
+  content: '';
+}
+/* line 36, style.scss */
+.text p.me:before {
+  content: "我：“";
+}
+/* line 39, style.scss */
+.text p.me:after {
+  content: "”";
+}
+
+/* line 46, style.scss */
+.together {
+  position: fixed;
+  width: 40%;
+  right: 20px;
+  top: 20px;
+}
